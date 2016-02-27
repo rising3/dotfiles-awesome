@@ -24,9 +24,18 @@ if [ -d $CONFIG_PATH/lain ]; then
 fi
 git clone https://github.com/copycat-killer/lain.git $CONFIG_PATH/lain
 
-# install my configurations.
+# install my configurations
 if [ -f $CONFIG_PATH/rc.lua ]; then
     rm -f $CONFIG_PATH/rc.lua.bak
     mv $CONFIG_PATH/rc.lua $CONFIG_PATH/rc.lua.bak
 fi
 ln -s $DIR/config/awesome/rc.lua $CONFIG_PATH
+
+# install mlterm seeting
+if [ -d ~/.mlterm ]; then
+    rm -rf ~/.mlterm.bak
+    mv ~/.mlterm  ~/.mlterm.bak
+fi
+mkdir ~/.mlterm
+ln -s $DIR/mllterm/main ~/.mlterm/
+ln -s $DIR/mllterm/aafont ~/.mlterm/

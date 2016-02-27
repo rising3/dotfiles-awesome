@@ -1,0 +1,14 @@
+use_transbg = false
+wall_picture = 
+fontsize = 14
+use_anti_alias = true
+input_method = fcitx
+scrollbar_view_name = simple
+fg_color = #ffffffffffff
+scrollbar_mode = right
+alpha = 31
+fade_ratio = 50
+brightness = 100
+contrast = 100
+gamma = 100
+bg_color = #2e2e34343636

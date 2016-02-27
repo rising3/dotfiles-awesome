@@ -55,11 +55,11 @@ local home   = os.getenv("HOME")
 local exec   = function (s) oldspawn(s, false) end
 local shexec = awful.util.spawn_with_shell
 
-modkey        = "Mod1"
-terminal      = "termite"
-tmux          = "termite -e tmux"
-termax        = "termite --geometry 1680x1034+0+22"
-rootterm      = "sudo -i termite"
+modkey        = "Mod4"
+terminal      = "mlterm"
+tmux          = "mlterm -e tmux"
+termax        = "mlterm --geometry 1680x1034+0+22"
+rootterm      = "sudo -i mlterm"
 browser       = "firefox"
 filemanager   = "spacefm"
 configuration = termax .. ' -e "vim -O $HOME/.config/awesome/rc.lua $HOME/.config/awesome/themes/' ..theme.. '/theme.lua"'
@@ -79,8 +79,8 @@ local layouts =
 
 if beautiful.wallpaper then
     for s = 1, screen.count() do
-        gears.wallpaper.tiled(beautiful.wallpaper, s)
-        -- gears.wallpaper.maximized(beautiful.wallpaper, s, true)
+        -- gears.wallpaper.tiled(beautiful.wallpaper, s)
+        gears.wallpaper.maximized(beautiful.wallpaper, s, true)
     end
 end
 
@@ -94,15 +94,16 @@ end
 -- | Menu | --
 
 menu_main = {
-  { "hibernate", "sudo pm-hibernate" },
-  { "poweroff",  "sudo poweroff"     },
+  { "hibernate", "mlterm -e sudo pm-hibernate" },
+  { "poweroff",  "mlterm -e sudo poweroff"     },
+  { "reboot",    "mlterm -e sudo reboot"       },
   { "restart",   awesome.restart     },
-  { "reboot",    "sudo reboot"       },
   { "quit",      awesome.quit        }}
 
 mainmenu = awful.menu({ items = {
   { " awesome",       menu_main   },
   { " file manager",  filemanager },
+  { " web",           browser     },
   { " root terminal", rootterm    },
   { " user terminal", terminal    }}})
 
