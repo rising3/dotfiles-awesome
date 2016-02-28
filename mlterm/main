@@ -1,11 +1,11 @@
 depth=32
 use_transbg = true
 wall_picture = 
-fontsize = 14
+fontsize = 16
 use_anti_alias = true
 input_method = fcitx
 scrollbar_view_name = simple
-fg_color = #d3d3d7d7cfcf
+fg_color = #7373d2d21616
 scrollbar_mode = right
 alpha = 223
 fade_ratio = 50
