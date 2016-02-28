@@ -36,6 +36,5 @@ if [ -d ~/.mlterm ]; then
     rm -rf ~/.mlterm.bak
     mv ~/.mlterm  ~/.mlterm.bak
 fi
-#mkdir ~/.mlterm
-cp $DIR/mllterm/main ~/.mlterm/
-cp $DIR/mllterm/aafont ~/.mlterm/
+# mkdir ~/.mlterm
+cp -ri $DIR/mllterm ~/.mlterm/

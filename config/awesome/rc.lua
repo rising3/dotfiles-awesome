@@ -59,7 +59,7 @@ modkey        = "Mod4"
 terminal      = "mlterm"
 tmux          = "mlterm -e tmux"
 termax        = "mlterm --geometry 1680x1034+0+22"
-rootterm      = "sudo -i mlterm"
+rootterm      = "mlterm -e sudo -i"
 browser       = "firefox"
 filemanager   = "spacefm"
 configuration = termax .. ' -e "vim -O $HOME/.config/awesome/rc.lua $HOME/.config/awesome/themes/' ..theme.. '/theme.lua"'
@@ -721,7 +721,8 @@ end
 do
   local cmds = {
     "fcitx",
-    "/bin/emacs --daemon"
+    "/bin/emacs --daemon",
+    "dropbox"
   }
   for _,i in pairs(cmds) do
     run_once(i)
