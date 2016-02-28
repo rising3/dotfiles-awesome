@@ -37,4 +37,4 @@ if [ -d ~/.mlterm ]; then
     mv ~/.mlterm  ~/.mlterm.bak
 fi
 # mkdir ~/.mlterm
-cp -ri $DIR/mllterm ~/.mlterm/
+cp -ri $DIR/mlterm ~/.mlterm/
