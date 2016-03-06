@@ -102,8 +102,8 @@ menu_main = {
 
 mainmenu = awful.menu({ items = {
   { " awesome",       menu_main   },
+  { " browser",       browser     },
   { " file manager",  filemanager },
-  { " web",           browser     },
   { " root terminal", rootterm    },
   { " user terminal", terminal    }}})
 
@@ -527,6 +527,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "Return", function () exec(rootterm) end),
     awful.key({ modkey,           }, "space",  function () awful.layout.inc(layouts,  1) end),
     awful.key({ modkey, "Shift"   }, "space",  function () awful.layout.inc(layouts, -1) end),
+    awful.key({ modkey,           }, "b",      function () exec(browser) end),
     awful.key({                   }, "Print", function () awful.util.spawn("scrot -e 'mv $f ~/screenshots/ 2>/dev/null'") end),
     awful.key({ modkey            }, "Print", function () awful.util.spawn("scrot -u -e 'mv $f ~/screenshots/ 2>/dev/null'") end),
     awful.key({ modkey, "Shift"   }, "Print", function () awful.util.spawn("scrot -s -e 'mv $f ~/screenshots/ 2>/dev/null'") end)
