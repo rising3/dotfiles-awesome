@@ -56,7 +56,8 @@ local exec   = function (s) oldspawn(s, false) end
 local shexec = awful.util.spawn_with_shell
 
 modkey        = "Mod4"
-terminal      = "gnome-terminal --hide-menubar"
+-- terminal      = "gnome-terminal --hide-menubar"
+terminal      = "mlterm"
 tmux          = "mlterm -e tmux"
 termax        = "mlterm --geometry 1680x1034+0+22"
 rootterm      = "mlterm -e sudo -i"
