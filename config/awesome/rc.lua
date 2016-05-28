@@ -57,10 +57,10 @@ local shexec = awful.util.spawn_with_shell
 
 modkey        = "Mod4"
 -- terminal      = "gnome-terminal --hide-menubar"
-terminal      = "mlterm"
-tmux          = "mlterm -e tmux"
-termax        = "mlterm --geometry 1680x1034+0+22"
-rootterm      = "mlterm -e sudo -i"
+terminal      = "urxvt"
+tmux          = "urxvt -e tmux"
+termax        = "urxvt --geometry 1680x1034+0+22"
+rootterm      = "urxvt -e sudo -i"
 browser       = "firefox"
 filemanager   = "spacefm"
 configuration = termax .. ' -e "vim -O $HOME/.config/awesome/rc.lua $HOME/.config/awesome/themes/' ..theme.. '/theme.lua"'
@@ -95,9 +95,9 @@ end
 -- | Menu | --
 
 menu_main = {
-  { "hibernate", "mlterm -e sudo pm-hibernate" },
-  { "poweroff",  "mlterm -e sudo poweroff"     },
-  { "reboot",    "mlterm -e sudo reboot"       },
+  { "hibernate", "urxvt -e sudo pm-hibernate" },
+  { "poweroff",  "urxvt -e sudo poweroff"     },
+  { "reboot",    "urxvt -e sudo reboot"       },
   { "restart",   awesome.restart     },
   { "quit",      awesome.quit        }}
 
