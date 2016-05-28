@@ -56,14 +56,13 @@ local exec   = function (s) oldspawn(s, false) end
 local shexec = awful.util.spawn_with_shell
 
 modkey        = "Mod4"
--- terminal      = "gnome-terminal --hide-menubar"
 terminal      = "urxvt"
 tmux          = "urxvt -e tmux"
-termax        = "urxvt --geometry 1680x1034+0+22"
 rootterm      = "urxvt -e sudo -i"
 browser       = "firefox"
-filemanager   = "spacefm"
-configuration = termax .. ' -e "vim -O $HOME/.config/awesome/rc.lua $HOME/.config/awesome/themes/' ..theme.. '/theme.lua"'
+filemanager   = "thunar"
+rhythmbox     = "rhythmbox"
+office        = "libreoffice"
 
 -- | Table of layouts | --
 
@@ -95,18 +94,21 @@ end
 -- | Menu | --
 
 menu_main = {
-  { "hibernate", "urxvt -e sudo pm-hibernate" },
-  { "poweroff",  "urxvt -e sudo poweroff"     },
-  { "reboot",    "urxvt -e sudo reboot"       },
+  { "hibernate", rootterm .. " pm-hibernate" },
+  { "poweroff",  rootterm .. " poweroff"     },
+  { "reboot",    rootterm .. " reboot"       },
   { "restart",   awesome.restart     },
   { "quit",      awesome.quit        }}
 
 mainmenu = awful.menu({ items = {
   { " awesome",       menu_main   },
+  { " root terminal", rootterm    },
+  { " user terminal", terminal    },
   { " browser",       browser     },
   { " file manager",  filemanager },
-  { " root terminal", rootterm    },
-  { " user terminal", terminal    }}})
+  { " rhythmbox",     rhythmbox   },
+  { " office",        office      }
+  }})
 
 -- | Markup | --
 
