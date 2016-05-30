@@ -726,6 +726,7 @@ end
 do
   local cmds = {
     "fcitx",
+    "/bin/conky -b",
     "/bin/emacs --daemon",
     "dropbox"
   }
