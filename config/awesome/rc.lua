@@ -561,10 +561,7 @@ clientkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "KP_Begin", function (c) c:geometry( { width = ww, height = wh, x = 0, y = ph } ) end),
     awful.key({ modkey,           }, "f",        function (c) c.fullscreen = not c.fullscreen  end),
     awful.key({ modkey,           }, "c",        function (c) c:kill() end),
-    awful.key({ modkey,           }, "n",
-        function (c)
-            c.minimized = true
-        end),
+    awful.key({ modkey,           }, "n",        function (c) c.minimized = true end),
     awful.key({ modkey,           }, "m",
         function (c)
             c.maximized_horizontal = not c.maximized_horizontal
