@@ -94,11 +94,11 @@ end
 -- | Menu | --
 
 menu_main = {
-  { "hibernate", rootterm .. " pm-hibernate" },
-  { "poweroff",  rootterm .. " poweroff"     },
-  { "reboot",    rootterm .. " reboot"       },
-  { "restart",   awesome.restart     },
-  { "quit",      awesome.quit        }}
+  { "hibernate", "pm-hibernate"   },
+  { "poweroff",  "poweroff"       },
+  { "reboot",    "reboot"         },
+  { "restart",   awesome.restart  },
+  { "quit",      awesome.quit     }}
 
 mainmenu = awful.menu({ items = {
   { " awesome",       menu_main   },
