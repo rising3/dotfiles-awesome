@@ -29,7 +29,8 @@ if [ -f $CONFIG_PATH/rc.lua ]; then
     rm -f $CONFIG_PATH/rc.lua.bak
     mv $CONFIG_PATH/rc.lua $CONFIG_PATH/rc.lua.bak
 fi
-ln -s $DIR/config/awesome/rc.lua.pro $CONFIG_PATH
+# ln -s $DIR/config/awesome/rc.lua.pro $CONFIG_PATH/rc.lua
+ln -s $DIR/config/awesome/rc.lua.orig $CONFIG_PATH/rc.lua
 
 # install mlterm seeting
 if [ -d ~/.mlterm ]; then
